@@ -1,0 +1,85 @@
+#background {
+    background-color: #0d727d;
+    width: 800px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 0;
+}
+
+main#container {
+    background-color: white;
+    width: 225px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 60px;
+    border-radius: 40px;
+}
+
+h4, h5 {
+    font-family: 'Satisfy', cursive;
+}
+
+h4 {
+    font-size: 26px;
+    border-bottom: solid 2px #0d727d;
+}
+
+h5 {
+    font-size: 20px;
+    border-top: solid 2px #0d727d;
+}
+
+#add {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    background-color: #a1d7e1; 
+    height: 24px;
+    color: #0d727d;
+}
+
+input {
+    border-color: #a1d7e1;
+    border-radius: 6px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    height: 20px;
+}
+
+ul {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 00;
+}
+
+li {
+    height: 30px;
+}
+
+button.delete, button.done {
+    background-color: #a1d7e1;
+    color: white;
+    margin: 0 4px;
+    border: none;
+    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    float: right;
+}
+
+li.alldone {
+    text-decoration: line-through;
+}
+
+li.alldone button.done {
+    background-color: white;
+    color: #0d727d;
+}
+
+span {
+    font-size: 24px;
+}
+
