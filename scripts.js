@@ -3,13 +3,29 @@ $('body').ready(() => {
   $('span#done-it').text('0');
 });
 
+let all = $('li').length
+
 $('button#add').click(() => {
     let todo = $('input').val();
     $('ul').append("<li>" + todo + "</li>");
     $('li:last-child').append('<button class="done"><i class="fa-solid fa-check"></i></button>');
     $('li:last-child').append('<button class="delete"><i class="fa-regular fa-trash-can"></i></i></button>');
     $('input').val("");
-    $('span#all').text($('li').length);
+    all += 1;
+    $('span#all').text(all);
+});
+
+$('body').keypress((event) => {
+  let keycode = event.which;
+  if(keycode == '13'){
+    let todo = $('input').val();
+    $('ul').append("<li>" + todo + "</li>");
+    $('li:last-child').append('<button class="done"><i class="fa-solid fa-check"></i></button>');
+    $('li:last-child').append('<button class="delete"><i class="fa-regular fa-trash-can"></i></i></button>');
+    $('input').val("");
+    all += 1;
+    $('span#all').text(all);  
+  }
 });
 
 $('ul').on('click', 'li',(event) => {
@@ -24,5 +40,6 @@ $('ul').on('click', 'button.done',(event) => {
 
 $('ul').on('click', '.delete', (event) => {
     $(event.target.parentElement.parentElement).css('display', 'none');
-    $('span#all').text($('li').length -1);
+    all -= 1;
+    $('span#all').text(all);
 });
