@@ -40,6 +40,14 @@ $('ul').on('click', 'button.done',(event) => {
 
 $('ul').on('click', '.delete', (event) => {
     $(event.target.parentElement.parentElement).css('display', 'none');
+  if $(event.target.parentElement.parentElement.parentElement).hasClass("alldone") {
+    let done = $('li.alldone').length;
+    done -= 1;
+    $('span#done-it').text($('li.alldone').length);
     all -= 1;
     $('span#all').text(all);
+  } else {
+    all -= 1;
+    $('span#all').text(all);
+  }
 });
